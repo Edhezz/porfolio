@@ -1,0 +1,31 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Octubre 2024",
+    title: "Desarrollador freelancer",
+    company: "Dauphin de México",
+    description:
+      "Desarrollador y responsable de la página oficial de la empresa, enfocada en la venta de audio profecional. Implementé un diseño web intuitivo y funcional que optimiza la experiencia del usuario y mejora la visibilidad de productos.",
+    link: "https://www.dauphinmx.com",
+  },
+  {
+    date: "Mayo-Septiembre 2023",
+    title: "Desarrollador",
+    company: "T-Systems",
+    description:
+      "Desarrollé un software auxiliar para el proyecto (T-Sycro), utilizando C++ para automatizar procesos y generar listas técnicas para los sistemas locales (VSS, Farben, PSSL).",
+  },
+]
+
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
