@@ -3,17 +3,23 @@ import EducationItem from "./EducationItem.astro"
 
 const EDUCATION = [
   {
-    date: "2024 - Actualmente",
+    date: "Sep 2023 - Abr 2025",
     degree: "Ingeniería en Desarrollo y Gestión de Software",
     institution: "Universidad Tecnológica de Izúcar de Matamoros",
     description:
-      "Actualmente cursando la ingeniería, con enfoque en el desarrollo de aplicaciones web y gestión eficiente de proyectos de software. Adquirí habilidades en lenguajes de programación, diseño de bases de datos, y metodologías ágiles para el desarrollo de proyectos tecnológicos.",
+      "He concluido  la ingeniería, con enfoque en el desarrollo de aplicaciones web y gestión eficiente de proyectos de software. Adquirí habilidades en lenguajes de programación como JavaScript, diseño de bases de datos relacionale como postgressql, mysql y supabase, no relacionales mongodb, y metodologías ágiles para el desarrollo de proyectos tecnológicos.",
   },
+  {
+    date: "Ago 2021 - Ago 2023",
+    degree: "Técnico Superior Universitario en Tecnologías de la Información área desarrollo de Software Multiplataforma",
+    institution: "Universidad Tecnológica de Izúcar de Matamoros",
+    description:
+      "He concluido el Grado de Técnico Superior con enfoque de paginas web basicas con html, css, javascript y apk con android y cordova",
+  }
 ]
 ---
 
 <section class="mt-16">
-  <!-- <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Perfil Académico</h2> -->
   <ol class="relative mt-8">
     {
       EDUCATION.map((education) => (

@@ -1,0 +1,49 @@
+---
+// import EducationItem from "./EducationItem.astro"
+import ContractItem from "./ContractItem.astro"
+
+const CURSOS = [
+  {
+    date: "Invierno 2025",
+    degree: "Bots con inteligencia artifical",
+    institution: "Udemy",
+    img: "img/558shots_so.png",
+  },
+  {
+    date: "Otoño 2023",
+    degree: "Primeros pasos SQL",
+    institution: "Coursera",
+    img: "img/558shots_so.png",
+  },
+  {
+    date: "Otoño 2023",
+    degree: "Curso Completo de Power BI DesktopL",
+    institution: "Coursera",
+    img: "img/558shots_so.png",
+  },
+  {
+    date: "Otoño 2023",
+    degree: "Fundamentos de la ingeniería de software",
+    institution: "Platzi",
+    img: "img/558shots_so.png",
+  },
+  {
+    date: "Primavera 2023",
+    degree: "Programación básica",
+    institution: "Platzi",
+    img: "img/558shots_so.png",
+  },
+]
+---
+
+<section class="mt-16">
+  <ol class="relative mt-8">
+    {
+      CURSOS.map((cursos) => (
+        <li class="">
+          <ContractItem {...cursos} />
+        </li>
+      ))
+    }
+  </ol>
+</section>
