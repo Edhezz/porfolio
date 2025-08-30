@@ -1,5 +1,8 @@
 ---
 import GitHub from "./icons/GitHub.astro"
+import Html from "./icons/Html.astro"
+import Css from "./icons/Css.astro"
+import Js from "./icons/Js.astro"
 import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
@@ -7,9 +10,25 @@ import LinkButton from "./LinkButton.astro"
 import ReactNative from "./icons/ReactNative.astro"
 import Supabase from "./icons/Supabase.astro"
 import FireBase from "./icons/FireBase.astro"
+import LinkInline from "./LinkInline.astro"
 
 
 const TAGS = {
+  HTML: {
+    name: "HTML5",
+    class: "bg-[#e34f26] text-white",
+    icon: Html,
+  },
+  CSS: {
+    name: "CSS3",
+    class: "bg-[#264de4] text-white",
+    icon: Css,
+  },
+  JS: {
+    name: "JavaScript",
+    class: "bg-[#f0db4f] text-black",
+    icon: Js,
+  },
   NEXT: {
     name: "Next.js",
     class: "bg-black text-white",
@@ -44,7 +63,7 @@ const PROJECTS = [
     link: "https://google-translate-with-ia.vercel.app/",
     github: "https://github.com/Edhezz/googleTranslateWithIA",
     image: "/img/186shots_so.png",
-    tags: [TAGS.NEXT, TAGS.SUPABASE, TAGS.TAILWIND],
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JS],
   },
  {
     title: "Ecommerce",
@@ -97,18 +116,18 @@ const PROJECTS = [
 
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
+      {github && (
+            <LinkInline href={github}>
               Code
+              <GitHub class="size-6" />
               
-            </LinkButton>
+            </LinkInline>
           )}
           {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
+            <LinkInline href={link}>
               Preview
-            </LinkButton>
+              <Link class="size-4" />
+            </LinkInline>
           )}
         </footer>
     </div>
